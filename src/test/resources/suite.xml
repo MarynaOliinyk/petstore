@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression tests suite" verbose="1" parallel="false">
+    <listeners>
+        <listener class-name="com.crmpd.apistage.utils.LogListener"/>
+    </listeners>
+    <test name="Regression tests" parallel="methods" thread-count="1">
+        <parameter name="url" value="http://stage.crm.pdgamedev.com:8080"/>
+        <classes>
+            <class name="io.swagger.petstore.PostPetTest"/>
+        </classes>
+    </test>
+</suite>
